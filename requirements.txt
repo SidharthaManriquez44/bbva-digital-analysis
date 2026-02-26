@@ -1,0 +1,9 @@
+# DB  Manage and  configutarions
+sqlalchemy
+
+#Data extraction and manipulation
+pandas
+
+# Tests
+pytest~=9.0.2
+pytest-cov~=7.0.0
