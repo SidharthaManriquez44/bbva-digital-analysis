@@ -3,7 +3,14 @@ sqlalchemy
 
 #Data extraction and manipulation
 pandas
+statsmodels
 
 # Tests
 pytest~=9.0.2
 pytest-cov~=7.0.0
+
+# Environment variables
+python-dotenv
+
+# Data modelation
+scikit-learn
