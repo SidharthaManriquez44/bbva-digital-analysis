@@ -1,16 +1,29 @@
-# DB  Manage and  configutarions
-sqlalchemy
-
-#Data extraction and manipulation
-pandas
-statsmodels
-
-# Tests
-pytest~=9.0.2
-pytest-cov~=7.0.0
-
-# Environment variables
-python-dotenv
-
-# Data modelation
-scikit-learn
+appdirs==1.4.4
+config==0.5.1
+configdb==0.1
+coverage==7.13.4
+exceptiongroup==1.3.1
+iniconfig==2.3.0
+joblib==1.5.3
+numpy==2.2.6
+packaging==26.0
+pandas==2.3.3
+patsy==1.0.2
+pluggy==1.6.0
+psycopg2==2.9.11
+Pygments==2.19.2
+pytest==9.0.2
+pytest-cov==7.0.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.1
+pytz==2025.2
+PyYAML==6.0.3
+scikit-learn==1.7.2
+scipy==1.15.3
+six==1.17.0
+SQLAlchemy==2.0.47
+statsmodels==0.14.6
+threadpoolctl==3.6.0
+tomli==2.4.0
+typing_extensions==4.15.0
+tzdata==2025.3
