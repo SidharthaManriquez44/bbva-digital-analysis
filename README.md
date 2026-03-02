@@ -1,8 +1,11 @@
 # BBVA Digital Banking Analytics Project
 
+[![CI Pipeline](https://github.com/SidharthaManriquez44/bbva-digital-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/SidharthaManriquez44/bbva-digital-analysis/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/SidharthaManriquez44/bbva-digital-analysis/graph/badge.svg?token=4cpobW87wp)](https://codecov.io/gh/SidharthaManriquez44/bbva-digital-analysis)
+
 End-to-End Analytical Layer built on top of a Dimensional Data Warehouse to analyze banking performance, digital transformation, and financial growth trends.
 
---- 
+
 This project simulates a real-world banking analytics environment using a layered architecture:
 ```text
 RAW → STAGING → CORE → MART → ANALYSIS
@@ -52,7 +55,7 @@ This repository consumes only the MART layer.
 * Loans per Branch
 * Deposits per Branch
 * Profit per Branch
----
+
 ## Key Insights
 * Post-pandemic contraction detected in 2020
 * Strong rebound in 2021 across loans and deposits
@@ -104,7 +107,7 @@ python src/run_analysis.py
 ```
 Database credentials must be configured in .env.
 
----
+
 ## What This Project Demonstrates
     ✔ Dimensional modeling fundamentals
     ✔ ETL orchestration with Python
@@ -112,11 +115,11 @@ Database credentials must be configured in .env.
     ✔ Window functions for growth calculations
     ✔ KPI-driven thinking
     ✔ End-to-end data architecture understanding
----
+
 ## Related Project
 bbva-digital-dw (Data Warehouse Layer)
 
----
+
 
 ## About Me
 Data professional focused on building structured, scalable analytical systems.
