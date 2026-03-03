@@ -34,6 +34,13 @@ jobs:
           python -c "import src"
           python -c "from src.data_access.bank_repository import BankRepository"
 
+      - name: Debug structure
+        run: |
+          echo "PWD:"
+          pwd
+          echo "LS:"
+          ls -R
+
       - name: Run tests with coverage
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)
