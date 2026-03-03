@@ -5,8 +5,8 @@ from src.config.db_config import get_engine
 
 class BankRepository:
 
-    def __init__(self):
-        self.engine = get_engine()
+    def __init__(self, engine=None):
+        self.engine = engine or get_engine()
 
     def get_bank_kpis(self, bank_code: str) -> pd.DataFrame:
 
