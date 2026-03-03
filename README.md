@@ -2,6 +2,10 @@
 
 [![CI Pipeline](https://github.com/SidharthaManriquez44/bbva-digital-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/SidharthaManriquez44/bbva-digital-analysis/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/SidharthaManriquez44/bbva-digital-analysis/graph/badge.svg?token=4cpobW87wp)](https://codecov.io/gh/SidharthaManriquez44/bbva-digital-analysis)
+![Python](https://img.shields.io/badge/python-3.10-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
 
 End-to-End Analytical Layer built on top of a Dimensional Data Warehouse to analyze banking performance, digital transformation, and financial growth trends.
 
