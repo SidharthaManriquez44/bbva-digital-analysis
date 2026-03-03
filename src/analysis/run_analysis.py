@@ -1,5 +1,7 @@
 from src.data_access.bank_repository import BankRepository
 from src.analytics.bank_analyzer import BankAnalyzer
+from dotenv import load_dotenv
+load_dotenv()
 
 branch = "BBVA"
 
