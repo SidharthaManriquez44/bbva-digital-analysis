@@ -7,6 +7,9 @@ from src.load.bank_dimension_loader import load_dim_bank_from_staging
 from src.load.channel_dimension_loader import load_dim_channel_default
 from src.load.fact_loader import load_fact_from_staging
 from src.load.mart_loader import MartLoader
+from dotenv import load_dotenv
+load_dotenv()
+
 
 logger = get_logger("bank_pipeline")
 
