@@ -1,0 +1,7 @@
+[project]
+name = "bbva-digital-analysis"
+version = "0.1.0"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["src"]
