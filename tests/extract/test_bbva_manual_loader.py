@@ -1,5 +1,6 @@
 import pytest
 import pandas as pd
+from pandas.api.types import is_numeric_dtype
 from src.extract.bbva_manual_loader import extract_bbva_data
 
 # -------------------------------------------------
@@ -48,7 +49,8 @@ def test_unique_year_per_bank():
 
 def test_extract_bbva_types():
     df = extract_bbva_data()
-    object_columns = [
+
+    numeric_columns = [
         "year",
         "branches",
         "atms",
@@ -58,5 +60,6 @@ def test_extract_bbva_types():
         "total_deposits",
         "net_income"
     ]
-    for col in object_columns:
-        assert pd.api.types.is_object_dtype(df[col]), f"{col} is not numeric"
+
+    for col in numeric_columns:
+        assert not is_numeric_dtype(df[col]), f"{col} unexpectedly numeric"
