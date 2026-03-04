@@ -2,11 +2,9 @@ from sqlalchemy import text
 from src.config.db_config import get_engine
 
 
-def load_staging():
-    engine = get_engine()
+def load_staging(connection = None):
 
-    with engine.begin() as conn:
-        conn.execute(text("""
+    query = text("""
             INSERT INTO staging.bank_year_metrics_clean (
                 raw_id,
                 bank_code,
@@ -35,4 +33,11 @@ def load_staging():
             FROM raw.bank_year_metrics_raw
             ON CONFLICT (bank_code, year)
             DO NOTHING;
-        """))
+        """)
+
+    if connection:
+        connection.execute(query)
+    else:
+        engine = get_engine()
+        with engine.begin() as conn:
+            conn.execute(query)

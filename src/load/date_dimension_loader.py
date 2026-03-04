@@ -2,11 +2,9 @@ from sqlalchemy import text
 from src.config.db_config import get_engine
 
 
-def load_dim_date_from_staging():
-    engine = get_engine()
+def load_dim_date_from_staging(connection = None):
 
-    with engine.begin() as conn:
-        conn.execute(text("""
+    query = text("""
             INSERT INTO core.dim_date (
                 date_key,
                 date,
@@ -25,4 +23,11 @@ def load_dim_date_from_staging():
             FROM staging.bank_year_metrics_clean
             ON CONFLICT (date_key)
             DO NOTHING;
-        """))
+        """)
+
+    if connection:
+        connection.execute(query)
+    else:
+        engine = get_engine()
+        with engine.begin() as conn:
+            conn.execute(query)

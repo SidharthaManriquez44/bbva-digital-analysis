@@ -2,11 +2,9 @@ from sqlalchemy import text
 from src.config.db_config import get_engine
 
 
-def load_fact_from_staging():
-    engine = get_engine()
+def load_fact_from_staging(connection = None):
 
-    with engine.begin() as conn:
-        conn.execute(text("""
+    query = text("""
             INSERT INTO core.fact_bank_metrics (
                 bank_key,
                 date_key,
@@ -46,4 +44,11 @@ def load_fact_from_staging():
                 total_loans = EXCLUDED.total_loans,
                 total_deposits = EXCLUDED.total_deposits,
                 net_income = EXCLUDED.net_income;
-        """))
+        """)
+
+    if connection:
+        connection.execute(query)
+    else:
+        engine = get_engine()
+        with engine.begin() as conn:
+            conn.execute(query)
